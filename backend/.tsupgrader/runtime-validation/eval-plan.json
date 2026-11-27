@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-11-21T06:25:00Z",
+  "generatedOnPlatform": "win32",
+  "projectType": "server",
+  "setup": [
+    {
+      "command": "npm",
+      "args": [
+        "ci"
+      ],
+      "timeoutSeconds": 600
+    }
+  ],
+  "assertions": [
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "npm",
+      "args": [
+        "test"
+      ],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "api-health-200",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": [
+        "start"
+      ],
+      "env": {
+        "PORT": "3101"
+      },
+      "url": "http://localhost:3101/api/health",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "backend-serves-home-200",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": [
+        "start"
+      ],
+      "env": {
+        "PORT": "3101"
+      },
+      "url": "http://localhost:3101/",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    }
+  ]
+}

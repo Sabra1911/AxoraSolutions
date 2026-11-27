@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+uploads
+.angular
+wallet
+Wallet_*.zip

@@ -1,0 +1,110 @@
+{
+  "planHash": "f471d3c0c7b264cd76db0377ed0d750cbe3b2408f522827f24af37cd560406ba",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-11-21T06:32:58.2714086Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 4843,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E ms-en-linea-backend@1.0.0 test\r\n\u003E node --test test/*.test.js\r\n\r\n\u2714 sin token \u2192 401 (66.3964ms)\r\n\u2714 token manipulado, con otro secreto o expirado \u2192 401 (15.9551ms)\r\n\u2714 permisos verificados en backend: CLIENTE no gestiona usuarios ni empresas (62.8006ms)\r\n\u2714 permisos: TECNICO no accede a empresas, cotizaciones ni dashboard global (14.7016ms)\r\n\u2714 aislamiento: el listado de un CLIENTE siempre filtra por la empresa de su token, aunque env\u00EDe otra (4.2579ms)\r\n\u2714 aislamiento: detalle de solicitud ajena devuelve 404 (el scope se aplica en SQL) (2.7936ms)\r\n\u2714 aislamiento: un TECNICO solo ve \u00F3rdenes asignadas a su usuario (2.1647ms)\r\n\u2714 crear solicitud: el empresa_id del cuerpo se ignora para clientes (9.7603ms)\r\n\u2714 crear solicitud: equipo de otra empresa se rechaza (3.2243ms)\r\n\u2714 validaci\u00F3n centralizada: datos inv\u00E1lidos \u2192 400 con detalle por campo (4.2313ms)\r\n\u2714 SQL injection: el t\u00E9rmino de b\u00FAsqueda viaja como bind, nunca concatenado (2.4423ms)\r\n\u2714 la lista de usuarios nunca incluye password_hash (1.9141ms)\r\n\u2714 ADMIN no puede crear SUPERADMIN (2.7247ms)\r\n\u2714 cliente no puede aprobar cotizaci\u00F3n de otra empresa (404) (2.3625ms)\r\n\u2714 cliente no ve cotizaciones en borrador (filtro por identidad) (1.887ms)\r\n\u2714 t\u00E9cnico no puede finalizar una orden que no es suya (2.9991ms)\r\n\u2714 adjuntos: sin token \u2192 401; entidad inv\u00E1lida \u2192 400 (2.8713ms)\r\n\u2714 ruta inexistente \u2192 404 JSON (1.6338ms)\r\n\u2714 login correcto emite access token y refresh token; el refresh se guarda solo como hash (7.1026ms)\r\n\u2714 login con clave incorrecta o correo inexistente \u2192 mismo error gen\u00E9rico (69.2587ms)\r\n\u2714 bloqueo tras 5 intentos fallidos (8.5508ms)\r\n\u2714 refresh rota el token; reutilizar uno viejo invalida toda la familia (2.6168ms)\r\n\u2714 refresh con token inexistente o ausente \u2192 401 (0.2589ms)\r\n\u2714 contrase\u00F1as se almacenan con bcrypt (613.9958ms)\r\n\u2714 minimiza correos, identificaciones y secuencias num\u00E9ricas (1.2437ms)\r\n\u2714 clasificaci\u00F3n usa la clave en header, minimiza texto y valida la respuesta JSON (2.2174ms)\r\n\u2714 diagn\u00F3stico devuelve una hip\u00F3tesis y pasos sin exponer contacto (0.999ms)\r\n\u2714 chat limita las consultas a la empresa del token y omite borradores (3.6334ms)\r\n\u2714 IA devuelve estado sin clave y las acciones no hacen llamadas al proveedor (129.2855ms)\r\n\u2714 permisos de IA se validan en backend y solicitudes inv\u00E1lidas dan 400 (11.1044ms)\r\n\u2714 el dise\u00F1ador exige autenticaci\u00F3n y permiso de creaci\u00F3n de solicitudes (68.6818ms)\r\n\u2714 el cat\u00E1logo del dise\u00F1ador devuelve precios y relaciona PVC, paneles y c\u00E1mara con c\u00F3digos activos (5.5426ms)\r\n\u2714 la carga acepta solo firmas de imagen y no guarda un archivo inv\u00E1lido (71.0024ms)\r\n[gemini espacios] analizar la fotograf\u00EDa: respuesta HTTP 429 (RESOURCE_EXHAUSTED)\r\n[gemini espacios] analizar la fotograf\u00EDa: respuesta HTTP 403 (PERMISSION_DENIED)\r\n[gemini espacios] analizar la fotograf\u00EDa: respuesta HTTP 404 (NOT_FOUND)\r\n\u2714 la fotograf\u00EDa se guarda en borrador, queda aislada por empresa y no se llama a Gemini sin clave (34.1027ms)\r\n\u2714 la edici\u00F3n de imagen requiere una salida real y desactiva el almacenamiento de interacciones (1.6099ms)\r\n\u2714 el proveedor explica errores de cuota, permisos y modelo sin exponer su respuesta original (1.9432ms)\r\n\u2714 el an\u00E1lisis entrega a Gemini el precio base y la unidad del cat\u00E1logo sin usarlos como cotizaci\u00F3n final (0.5917ms)\r\n\u2714 cotizaci\u00F3n: totales, IVA y descuento calculados en servidor (0.7948ms)\r\n\u2714 cotizaci\u00F3n: sin conceptos o descuento excesivo se rechaza (0.3969ms)\r\n\u2714 cotizaci\u00F3n: redondeo a 2 decimales (0.123ms)\r\n\u2714 m\u00E1quina de estados de solicitud (0.5966ms)\r\n\u2714 m\u00E1quina de estados de cotizaci\u00F3n: respuesta solo desde ENVIADA (0.1413ms)\r\n\u2714 m\u00E1quina de estados de orden y mantenimiento (0.1352ms)\r\n\u2714 adjuntos: firma de archivo debe coincidir con el MIME (0.2538ms)\r\n\u2714 usuarios: reglas de roles y empresa (0.3456ms)\r\n\u2714 fechas: YYYY-MM-DD se interpreta como fecha local (sin corrimiento de zona horaria) (0.2173ms)\r\n\u2139 tests 46\r\n\u2139 suites 0\r\n\u2139 pass 46\r\n\u2139 fail 0\r\n\u2139 cancelled 0\r\n\u2139 skipped 0\r\n\u2139 todo 0\r\n\u2139 duration_ms 1462.4616\r\n",
+        "durationMs": 1979,
+        "testResults": {
+          "testFramework": "unknown",
+          "runnerDetectedFrom": "none",
+          "testsTotal": 0,
+          "testsPassed": 0,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": true
+        }
+      },
+      {
+        "name": "api-health-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n{\u0022status\u0022:\u0022ok\u0022}\n--- server output ---\n\r\n\u003E ms-en-linea-backend@1.0.0 start\r\n\u003E node src/server.js\r\n\r\nMS En L\u00EDnea API escuchando en :3101 (development)\r\n",
+        "durationMs": 1805
+      },
+      {
+        "name": "backend-serves-home-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\n\u003Chtml lang=\u0022es\u0022\u003E\n\u003Chead\u003E\n  \u003Cmeta charset=\u0022utf-8\u0022\u003E\n  \u003Ctitle\u003EMS En L\u00EDnea\u003C/title\u003E\n  \u003Cbase href=\u0022/\u0022\u003E\n  \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1\u0022\u003E\n  \u003Clink rel=\u0022icon\u0022 type=\u0022image/x-icon\u0022 href=\u0022favicon.ico\u0022\u003E\n\u003Clink rel=\u0022stylesheet\u0022 href=\u0022styles-AWQBU7JT.css\u0022\u003E\u003C/head\u003E\n\u003Cbody\u003E\n  \u003Capp-root\u003E\u003C/app-root\u003E\n\u003Cscript src=\u0022polyfills-5CFQRCPP.js\u0022 type=\u0022module\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022main-TXO3LUD6.js\u0022 type=\u0022module\u0022\u003E\u003C/script\u003E\u003C/body\u003E\n\u003C/html\u003E\n",
+        "durationMs": 26
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "C:\\Users\\Usuario\\Downloads\\ms-en-linea-clau\\backend",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "C:\\Users\\Usuario\\Downloads\\ms-en-linea-clau\\backend",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "api-health-200",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "start"
+        ],
+        "cwd": "C:\\Users\\Usuario\\Downloads\\ms-en-linea-clau\\backend",
+        "env": {
+          "PORT": "3101"
+        },
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "backend-serves-home-200",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "start"
+        ],
+        "cwd": "C:\\Users\\Usuario\\Downloads\\ms-en-linea-clau\\backend",
+        "env": {
+          "PORT": "3101"
+        },
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}

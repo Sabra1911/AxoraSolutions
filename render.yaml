@@ -1,0 +1,17 @@
+# Blueprint opcional para Render (plan gratuito: la app "duerme" tras 15 min sin uso). Los secretos se escriben en el panel, NO aquí.
+services:
+  - type: web
+    name: axora-solutions
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - { key: NODE_ENV, value: production }
+      - { key: DB_USER, sync: false }
+      - { key: DB_PASSWORD, sync: false }
+      - { key: DB_CONNECT_STRING, sync: false }
+      - { key: DB_CONFIG_DIR, value: /etc/secrets }
+      - { key: DB_WALLET_LOCATION, value: /etc/secrets }
+      - { key: DB_WALLET_PASSWORD, sync: false }
+      - { key: JWT_ACCESS_SECRET, generateValue: true }
+      - { key: CORS_ORIGINS, sync: false }

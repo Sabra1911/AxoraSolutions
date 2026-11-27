@@ -1,0 +1,27 @@
+{
+  "planHash": "2357adbb6fdb9a8f5b51dfde8340ced2b27d59396c2bec410c5a8d64091a6036",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-11-21T06:28:56.8686950Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": false,
+    "setupDurationMs": 5691,
+    "setupFailureOutput": "setup step 0 \u0027npm\u0027 failed (exit=1, timedOut=False)\r\nnpm error code EUSAGE\r\nnpm error\r\nnpm error \u0060npm ci\u0060 can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with \u0060npm install\u0060 before continuing.\r\nnpm error\r\nnpm error Missing: vite@6.4.6 from lock file\r\nnpm error Missing: esbuild@0.25.12 from lock file\r\nnpm error Missing: @esbuild/aix-ppc64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/android-arm@0.25.12 from lock file\r\nnpm error Missing: @esbuild/android-arm64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/android-x64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/darwin-arm64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/darwin-x64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/freebsd-arm64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/freebsd-x64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-arm@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-arm64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-ia32@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-loong64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-mips64el@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-ppc64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-riscv64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-s390x@0.25.12 from lock file\r\nnpm error Missing: @esbuild/linux-x64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/netbsd-arm64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/netbsd-x64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/openbsd-arm64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/openbsd-x64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/openharmony-arm64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/sunos-x64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/win32-arm64@0.25.12 from lock file\r\nnpm error Missing: @esbuild/win32-ia32@0.25.12 from lock file\r\nnpm error Missing: @esbuild/win32-x64@0.25.12 from lock file\r\nnpm error\r\nnpm error Clean install a project\r\nnpm error\r\nnpm error Usage:\r\nnpm error npm ci\r\nnpm error\r\nnpm error Options:\r\nnpm error [--install-strategy \u003Choisted|nested|shallow|linked\u003E] [--legacy-bundling]\r\nnpm error [--global-style] [--omit \u003Cdev|optional|peer\u003E [--omit \u003Cdev|optional|peer\u003E ...]]\r\nnpm error [--include \u003Cprod|dev|optional|peer\u003E [--include \u003Cprod|dev|optional|peer\u003E ...]]\r\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\r\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\r\nnpm error [-w|--workspace \u003Cworkspace-name\u003E [-w|--workspace \u003Cworkspace-name\u003E ...]]\r\nnpm error [--workspaces] [--include-workspace-root] [--install-links]\r\nnpm error\r\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\r\nnpm error\r\nnpm error Run \u0022npm help ci\u0022 for more info\r\nnpm error A complete log of this run can be found in: C:\\Users\\Usuario\\AppData\\Local\\npm-cache\\_logs\\2026-11-21T06_28_51_568Z-debug-0.log\r\n",
+    "assertions": [],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "C:\\Users\\Usuario\\Downloads\\ms-en-linea-clau\\frontend",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
